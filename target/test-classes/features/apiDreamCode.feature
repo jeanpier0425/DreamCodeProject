@@ -10,5 +10,10 @@ Feature: API Testing Example
     Then the response status code should be 200
     And the response body should contain "name"
 
-
+    @Post
+  Scenario: Post request
+    Given the endpoint is set
+    And I send a POST request to "/posts"
+    Then the response status code should be 201
+    And the response body should contain "body"
 

@@ -33,7 +33,7 @@ public class ApiStepDefinition {
         System.out.println();
     }
 
-    @When("I send a POST request to {string}")
+    @Given("I send a POST request to {string}")
     public void sendPostRequest(String resource) {
         response = request.body(REQUESTBODY).post(URL+resource);
         System.out.println();
